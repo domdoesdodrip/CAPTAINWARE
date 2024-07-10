@@ -1,0 +1,179 @@
+
+local gameid = game.PlaceId if(gameid == 1215581239)
+then wait(3)
+local Player = game.Players.LocalPlayer
+wait(1)
+if Player.UserId == 4427664447 or Player.UserId == 464844128 then
+print("Valid Private User found! wait 3-8 seconds to load")
+    local gameid = game.PlaceId if(gameid == 1215581239)
+then wait(3)
+end
+
+print("Script Loaded! (RELEASE V1.0.4)")
+
+wait (1.0)
+getgenv().SecureMode = true
+local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/shlexware/Rayfield/main/source'))()
+
+local Window = Rayfield:CreateWindow({
+   Name = "Doomspire | v1.0.4",
+   LoadingTitle = "Doomspire script",
+   LoadingSubtitle = "by domdoesdodrlp",
+   ConfigurationSaving = {
+      Enabled = false,
+      FolderName = nil, -- Create a custom folder for your hub/game
+      FileName = "captainhub"
+   },
+   Discord = {
+      Enabled = false,
+      Invite = "noinvitelink", -- The Discord invite code, do not include discord.gg/. E.g. discord.gg/ABCD would be ABCD.
+      RememberJoins = true -- Set this to false to make them join the discord every time they load it up
+   },
+   KeySystem = true, -- Set this to true to use our key system
+   KeySettings = {
+      Title = "captains Doomspire script",
+      Subtitle = "Key System",
+      Note = "RELEASE Version v1.0.4",
+      FileName = "captainhub",
+      SaveKey = true,
+      GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
+      Key = "private-user1?"
+   }
+   })
+   
+   Rayfield:Notify({
+      Title = "Doomspire script v1.0.4 Loaded!",
+      Content = "Loaded successfully!",
+      Duration = 6.5,
+      Image = 4483362458,
+      Actions = { -- Notification Buttons
+         Ignore = {
+            Name = "Ok!",
+            Callback = function()
+            print("The user clicked Ok!")
+         end
+      },
+   },
+   })
+
+
+   local Tab = Window:CreateTab("Blatant")
+   local Section = Tab:CreateSection("Spam Tools --(LAG)--")
+local Button = Tab:CreateButton({
+   Name = "Spam Tools! LAGS ALOT",
+   Callback = function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/captainware/Doomspire-hub/main/Spam%20tools"))()
+   end,
+})
+
+local Section = Tab:CreateSection("Inf Jump")
+local Button = Tab:CreateButton({
+   Name = "Inf Jump",
+   Callback = function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/captainware/Doomspire-hub/main/Inf%20jump"))()
+   end,
+})
+
+local Section = Tab:CreateSection("Walkspeed")
+local Slider = Tab:CreateSlider({
+      Name = "Player Speed",
+      Range = {0, 1000},
+      Increment = 10,
+      Suffix = "Speed",
+      CurrentValue = 50,
+      Flag = "Slider1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+      Callback = function(s)
+         game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+      end,
+   })
+
+   local Section = Tab:CreateSection("Fly --(E To toggle)--")
+   local Button = Tab:CreateButton({
+      Name = "Fly",
+      Callback = function()
+       loadstring(game:HttpGet("https://raw.githubusercontent.com/captainware/Doomspire-hub/main/Fly"))()
+      end,
+   })
+
+   local Tab = Window:CreateTab("Fun")
+   local Section = Tab:CreateSection("Walk On Walls --(Z To toggle)--")
+local Button = Tab:CreateButton({
+   Name = "Walk On Walls",
+   Callback = function()
+      Rayfield:Notify({
+         Title = "Walk On Walls",
+         Content = "Loaded successfully!",
+         Duration = 6.5,
+         Image = 4483362458,
+         Actions = { -- Notification Buttons
+            Ignore = {
+               Name = "Ok!",
+               Callback = function()
+               print("The user clicked Ok!")
+            end
+         },
+      },
+
+      })
+      
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/captainware/Doomspire-hub/main/Walk%20On%20Walls"))()
+   end,
+})
+
+local Section = Tab:CreateSection("Sing")
+local Button = Tab:CreateButton({
+   Name = "You've Been Trolled!",
+   Callback = function()
+      game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("You've been trolled", "All") -- sends your message to all players
+      wait(0.8)
+      game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("You've been trolled", "All") -- sends your message to all players
+      wait(0.8)
+      game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("Yes, you've probably been told", "All") -- sends your message to all players
+      wait(0.8)
+      game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("Don't reply to this guy", "All") -- sends your message to all players
+      wait(0.8)
+      game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("He's just trying to get a rise Out of you! yes, it's true", "All") -- sends your message to all players
+   end,
+})
+
+local Tab = Window:CreateTab("TP To Bases")
+local Section = Tab:CreateSection("Teleports")
+local Button = Tab:CreateButton({
+Name = "Red",
+Callback = function()
+   game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-131,25,-1.5)
+end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "Blue",
+   Callback = function()
+      game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-0.4,25,131)
+   end,
+   })
+
+   local Button = Tab:CreateButton({
+      Name = "Green",
+      Callback = function()
+         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-0.4,25,-131)
+      end,
+      })
+
+      local Button = Tab:CreateButton({
+         Name = "Yellow",
+         Callback = function()
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(131,25,-1.5 )
+         end,
+         })
+         local Tab = Window:CreateTab("Misc")
+         local Section = Tab:CreateSection("CMDS")
+         local Button = Tab:CreateButton({
+            Name = "Inf Yield",
+            Callback = function()
+               loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+            end,
+            })
+      
+local Tab = Window:CreateTab("Credits")
+local Paragraph = Tab:CreateParagraph({Title = "domdoesdodrlp", Content = "Owner. release VERSION 1.0.4"})
+end end
